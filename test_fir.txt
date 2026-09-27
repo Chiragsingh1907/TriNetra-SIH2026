@@ -1,0 +1,19 @@
+FIR No: 123/2026
+Police Station: Cyber Crime, Mumbai
+
+Complainant: Rajesh Kumar
+Contact: 9876543210
+Address: Andheri East, Mumbai
+
+Incident Details:
+On 10th October 2026, I received a call from a person introducing himself as "Suresh Patil". He claimed to be a bank agent and threatened to block my account if I didn't send money. 
+This was an extortion threat call from the mobile number 9988776655.
+
+He asked me to transfer Rs 50,000 to the following account:
+Account Number: 123456789012
+IFSC Code: HDFC0001234
+Bank: HDFC
+
+He also mentioned a vehicle registration number MH-02-AB-1234 for delivery.
+
+Another suspect named Amit Singh was involved in this fraud, whose contact number is 8877665544.
