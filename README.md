@@ -10,6 +10,19 @@
 
 ---
 
+## 👥 Team Aletheia
+
+| Role | Name | Stream / Branch |
+| :--- | :--- | :--- |
+| **Team Leader** | Arnav Bhatnagar | B.Tech CSE (AI & ML) |
+| **Team Member** | Rao Yashvir Singh | B.Tech CSE (Cybersecurity) |
+| **Team Member** | Chirag Singh | B.Tech CSE (AI & ML) |
+| **Team Member** | Shresth Chaudhary | B.Tech CSE (Core) |
+| **Team Member** | Prarthana Baisoya | B.Tech CSE (AI & ML) |
+| **Team Member** | Anup Kumar Sinha | B.Tech CSE (Core) |  
+
+---
+
 ## ⚠️ The Problem Landscape
 
 Investigating agencies currently face significant hurdles when mapping criminal enterprises:
@@ -80,3 +93,6 @@ TriNetra-SIH2026/
 ├── test_fir.txt            # Synthetic FIR data for testing and validation
 ├── .gitignore              # Standard exclusions (node_modules, venv, __pycache__)
 └── README.md               # Project documentation
+
+---
+
