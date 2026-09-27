@@ -10,19 +10,6 @@
 
 ---
 
-## 👥 Team Aletheia
-
-| Role | Name | Stream / Branch |
-| :--- | :--- | :--- |
-| **Team Leader** | Arnav Bhatnagar | B.Tech CSE (AI & ML) |
-| **Team Member** | Rao Yashvir Singh | B.Tech CSE (Cybersecurity) |
-| **Team Member** | Chirag Singh | B.Tech CSE (AI & ML) |
-| **Team Member** | Shresth Chaudhary | B.Tech CSE (Core) |
-| **Team Member** | Prarthana Baisoya | B.Tech CSE (AI & ML) |
-| **Team Member** | Anup Kumar Sinha | B.Tech CSE (Core) |  
-
----
-
 ## ⚠️ The Problem Landscape
 
 Investigating agencies currently face significant hurdles when mapping criminal enterprises:
@@ -38,22 +25,17 @@ TriNetra shifts the investigative focus from simply asking *"Who committed the c
 
 <img width="1600" height="811" alt="The Login Screen" src="https://github.com/user-attachments/assets/636c53b3-3782-42d0-921a-d3961040002c" />
 
-
-
 ### 📝 NLP Extraction & Human-in-the-Loop Validation
 
 Before data is committed to the graph, TriNetra processes raw FIR documents and extracts critical entities (Suspects, Plaintiffs, Phone Anchors, Financial Accounts). The built-in Validation Panel ensures human oversight, allowing investigating officers to verify AI-extracted intelligence, mitigating false positives and ensuring data integrity.
 
 <img width="1600" height="807" alt="Validation Panel" src="https://github.com/user-attachments/assets/3f047ad5-efa2-4688-bd6c-165ddbf40998" />
 
-
 ### 🕸️ Core Capabilities & Network Visualization
 
 Based on our functional prototype, TriNetra delivers the following advanced investigative capabilities:
 
 <img width="1600" height="806" alt="The Full Network Graph" src="https://github.com/user-attachments/assets/38cf657e-92f1-4d80-bbca-3203e17464d3" />
-
-
 
 * **Holistic Entity Linkage:** The graph dynamically maps disparate entity types into a unified view, categorizing nodes by type (e.g., FIR Documents in grey, Persons in blue, Phone Anchors in green, and Financial Accounts in purple).
 * **Semantic Relationships:** Directed edges are automatically labeled with specific relationships such as `FILED_COMPLAINT`, `ACCUSED_IN`, and `LINKED_TO`, contextualizing the network.
@@ -94,5 +76,95 @@ TriNetra-SIH2026/
 ├── .gitignore              # Standard exclusions (node_modules, venv, __pycache__)
 └── README.md               # Project documentation
 
+```
+
 ---
 
+## 🚀 Local Setup & Installation
+
+**Prerequisites:** Node.js (v18+), Python (3.10+), Neo4j Desktop (or Docker).
+
+**1. Clone the Repository**
+
+```bash
+git clone https://github.com/Chiragsingh1907/TriNetra-SIH2026.git
+cd TriNetra-SIH2026
+
+```
+
+**2. Backend Setup**
+
+```bash
+cd backend
+python -m venv venv
+source venv/Scripts/activate  # On Windows
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+```
+
+**3. Frontend Setup**
+
+```bash
+cd ../frontend
+npm install
+npm run dev
+
+```
+
+**4. Graph Database**
+Ensure a local instance of Neo4j is running. Configure credentials in the backend `.env` file to establish the connection for graph analytics.
+
+---
+
+## 🐳 Production Deployment (Air-Gapped / On-Premise)
+
+TriNetra is fully containerized to ensure seamless, secure deployment on isolated police intranets without requiring external internet access. Ensure Docker and Docker Compose are installed on the host server.
+
+**1. Build the System Images**
+Navigate to the root directory containing the `docker-compose.yml` file and compile the frontend, backend, and database containers:
+
+```bash
+docker-compose build
+
+```
+
+**2. Launch the TriNetra Environment**
+Start the entire stack in detached mode:
+
+```bash
+docker-compose up -d
+
+```
+
+**3. Access the Intelligence Terminal**
+Once the containers are running, access the system components via your web browser:
+
+* **Terminal UI (Investigators):** `http://localhost:3000`
+* **FastAPI Backend Swagger Docs:** `http://localhost:8000/docs`
+* **Neo4j Graph Database (Admins):** `http://localhost:7474`
+
+**4. Secure Shutdown**
+To safely spin down the environment while preserving the encrypted graph database volumes:
+
+```bash
+docker-compose down
+
+```
+
+---
+
+## 👥 Team Aletheia
+
+| Role | Name | Stream / Branch |
+| --- | --- | --- |
+| **Team Leader** | Arnav Bhatnagar | B.Tech CSE (AI & ML) |
+| **Team Member** | Rao Yashvir Singh | B.Tech CSE (Cybersecurity) |
+| **Team Member** | Chirag Singh | B.Tech CSE (AI & ML) |
+| **Team Member** | Shresth Chaudhary | B.Tech CSE (Core) |
+| **Team Member** | Prarthana Baisoya | B.Tech CSE (AI & ML) |
+| **Team Member** | Anup Kumar Sinha | B.Tech CSE (Core) |
+
+```
+
+```
